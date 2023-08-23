@@ -19,18 +19,20 @@
   <br>
       <div class="cont">
           <div class="form sign-in">
+              <form action="Loginsrv" method="post">
               <h2>Welcome</h2>
               <label>
                   <span>Email</span>
-                  <input type="email" name="username"/>
+                  <input type="text" name="username"/>
               </label>
               <label>
                   <span>Password</span>
                   <input type="password" name="password"/>
               </label>
               <p class="forgot-pass">Forgot password?</p>
-              <button type="button" class="submit">Sign In</button>
-           
+              <button type="submit" class="submit">Sign In</button>
+              
+              </form>
           </div>
           <div class="sub-cont">
               <div class="img">

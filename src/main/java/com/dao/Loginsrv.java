@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.util.DBUtil;
 import java.sql.SQLException;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -40,11 +41,17 @@ public class Loginsrv extends HttpServlet {
         ResultSet rs = null;
         ResultSet rs1 = null;
         try {
-            pst = conn.prepareStatement("select * from vendor where vid=? and password=?");
+            pst = conn.prepareStatement("select * from vendor where name=? and password=?");
             pst.setString(1, uname);
             pst.setString(2, pword);
             rs = pst.executeQuery();
             if (rs.next()) {
+
+                
+                
+                RequestDispatcher rd = request.getRequestDispatcher("header.jsp");
+
+                rd.forward(request, response);
 
             }
         } catch (SQLException e) {

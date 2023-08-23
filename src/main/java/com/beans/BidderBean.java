@@ -12,7 +12,7 @@ package com.beans;
 public class BidderBean {
 
     private String email, pass;
-
+     BidderBean(){}
     public String getEmail() {
         return email;
     }

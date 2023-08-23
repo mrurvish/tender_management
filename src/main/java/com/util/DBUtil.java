@@ -6,6 +6,7 @@
 package com.util;
 
 import java.sql.*;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -16,11 +17,15 @@ import java.util.ResourceBundle;
 public class DBUtil {
 
     private static Connection conn = null;
-	
+	public DBUtil(){
+		
+	}
 	
 	public static Connection provideConnection(){
-		
-		ResourceBundle rb = ResourceBundle.getBundle("dbdetails");
+                               // Locale defaultLocale = new Locale("en", "IN");
+				ResourceBundle rb = ResourceBundle.getBundle("com.db.detail",Locale.getDefault());
+
+		//ResourceBundle rb = ResourceBundle.getBundle("dbdetails");
 		
 		String cs = rb.getString("connectionString");
 		String username = rb.getString("username");
