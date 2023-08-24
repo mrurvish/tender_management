@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <title>HTML5 Login Form with validation Example</title>
  
-<link rel="stylesheet" href="css/stylelogin.css">
+<link rel="stylesheet" href="css//stylelogin.css">
 
 </head>
 <body>
@@ -50,10 +50,15 @@
                   </div>
               </div>
               <div class="form sign-up">
+                  <form action="Registersrv" method="post">
                   <h2>Create your Account</h2>
                   <label>
                       <span>Name</span>
                       <input type="text" />
+                  </label>
+                  <label>
+                      <span>Mobile</span>
+                      <input type="number" />
                   </label>
                   <label>
                       <span>Email</span>
@@ -63,8 +68,16 @@
                       <span>Password</span>
                       <input type="password" />
                   </label>
+                  <label>
+                      <span>Coumpany</span>
+                      <input type="text" />
+                  </label>
+                  <label>
+                      <span>Address</span>
+                      <input type="textarea" />
+                  </label>
                   <button type="button" class="submit">Sign Up</button>
-                  
+                  </form>
               </div>
           </div>
       </div>
