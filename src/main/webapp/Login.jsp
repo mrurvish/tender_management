@@ -54,29 +54,29 @@
                   <h2>Create your Account</h2>
                   <label>
                       <span>Name</span>
-                      <input type="text" />
+                      <input type="text" name="vname"/>
                   </label>
                   <label>
                       <span>Mobile</span>
-                      <input type="number" />
+                      <input type="number" name="vmob"/>
                   </label>
                   <label>
                       <span>Email</span>
-                      <input type="email" />
+                      <input type="email" name="vemail"/>
                   </label>
                   <label>
                       <span>Password</span>
-                      <input type="password" />
+                      <input type="password" name="vpass"/>
                   </label>
                   <label>
                       <span>Coumpany</span>
-                      <input type="text" />
+                      <input type="text" name="cname"/>
                   </label>
                   <label>
                       <span>Address</span>
-                      <input type="textarea" />
+                      <input type="textarea" name="vaddr"/>
                   </label>
-                  <button type="button" class="submit">Sign Up</button>
+                  <button type="submit" class="submit">Sign Up</button>
                   </form>
               </div>
           </div>

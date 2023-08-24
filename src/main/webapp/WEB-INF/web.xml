@@ -4,9 +4,17 @@
         <servlet-name>Loginsrv</servlet-name>
         <servlet-class>com.srv.Loginsrv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Registersrv</servlet-name>
+        <servlet-class>com.srv.Registersrv</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Loginsrv</servlet-name>
         <url-pattern>/Loginsrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registersrv</servlet-name>
+        <url-pattern>/Registersrv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
