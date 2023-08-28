@@ -19,6 +19,7 @@
                <div class="col-md-12">
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <h1>Hello World!</h1>
+         
                   </div>
                </div>
             </div>
