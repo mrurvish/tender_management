@@ -14,8 +14,8 @@
     <body>
         <jsp:include page="header.jsp"></jsp:include>
             <div id="top_section">
-                <div class="container-fluid">
-
+                <div class="container-fluid row">
+                   
                     <div class="col-md-2">
 
 
@@ -25,7 +25,7 @@
 
 
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-8">
                     <table class="table table-striped table-hover bg-gray">
                         <tr style="color: white; font-size: 16px; font-weight: bold; background-color:black;opacity: 0.7">
                             <td>Tender Name</td>

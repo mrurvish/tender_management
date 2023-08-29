@@ -14,7 +14,7 @@
 <body>
 	
           <div class="marquee" style="border:2px #26b0b0 solid;background-color:white">
-          <h4 style="background-color:#26b0b0; margin-top:-1.8px; padding: 5px;"><i class="glyphicon glyphicon-volume-up"></i> 
+          <h4 style="background-color:black; margin-top:-1.8px; padding: 5px;opacity: 0.7;color: white"><i class="glyphicon glyphicon-volume-up"></i> 
           &nbsp; Latest Updates and Notice</h4>
             <div class="marquee-content" style="padding:10px;font-weight: bold;font-size: 1.1em">
             <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrollamount="5" height="380px">
