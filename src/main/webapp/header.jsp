@@ -60,7 +60,7 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home</a>
+                                            <a class="nav-link" href="index.jsp">Home</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="about.html">About</a>
@@ -72,9 +72,10 @@
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="loginFailed.jsp">List of vendors</a></li>
-                                                <li><a href="loginFailed.jsp">Approval Status</a></li>
-                                                <li><a href="loginFailed.jsp">Search Vendor</a></li>
+                                                <li><a href="Tenderview.jsp">View all Tenders</a></li>
+                                                <li><a href="Tenderbid.jsp">Bid for a Tender</a></li>
+                                                <li><a href="Tenderbidhistory.jsp">Bidding History</a></li>
+                                                <li><a href="Tenderbidstatus.jsp">Bid Status</a></li>
                                             </ul>
                                         </li>
 
@@ -84,7 +85,7 @@
 
                                         <li class="dropdown">
 
-                                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">Vendors
+                                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">Profile
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">

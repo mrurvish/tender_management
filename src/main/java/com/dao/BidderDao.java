@@ -26,6 +26,6 @@ import com.util.DBUtil;
  *
  * @author Admin
  */
-public class BidderDao {
+public interface BidderDao {
    
 }
