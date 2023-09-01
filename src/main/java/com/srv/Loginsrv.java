@@ -41,7 +41,7 @@ public class Loginsrv extends HttpServlet {
         ResultSet rs = null;
         ResultSet rs1 = null;
         try {
-            pst = conn.prepareStatement("select * from vendor where name=? and password=?");
+            pst = conn.prepareStatement("select * from vendor where vemail=? and password=?");
             pst.setString(1, uname);
             pst.setString(2, pword);
             rs = pst.executeQuery();
@@ -52,7 +52,13 @@ public class Loginsrv extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("header.jsp");
 
                 rd.forward(request, response);
-                
+
+            } else {
+
+                PrintWriter pw = response.getWriter();
+                RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+                rd.include(request, response);
+                pw.print("<script>document.getElementById('show').innerHTML = 'Invalid Username or Password<br>Please Try Again!'</script>");
 
             }
         } catch (SQLException e) {

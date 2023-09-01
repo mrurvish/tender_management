@@ -23,7 +23,7 @@ public class DBUtil {
 	
 	public static Connection provideConnection(){
                                // Locale defaultLocale = new Locale("en", "IN");
-				ResourceBundle rb = ResourceBundle.getBundle("com.db.detail",Locale.getDefault());
+				ResourceBundle rb = ResourceBundle.getBundle("detail",Locale.getDefault());
 
 		//ResourceBundle rb = ResourceBundle.getBundle("dbdetails");
 		

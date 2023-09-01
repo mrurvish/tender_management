@@ -32,7 +32,7 @@ public class VendorDaoImpl implements VendorDao {
 		
 		try {
 			
-			pst = con.prepareStatement("select * from vendor where email=?");
+			pst = con.prepareStatement("select * from vendor where vemail=?");
 		
 			pst.setString(1, vendor.getEmail());
 			ResultSet rs = pst.executeQuery();
@@ -47,7 +47,7 @@ public class VendorDaoImpl implements VendorDao {
 			
 				ps = con.prepareStatement("insert into vendor values(?,?,?,?,?,?,?)");
 				
-				ps.setString(1, null);
+				ps.setString(1, "1");
 				ps.setString(2, vendor.getPassword());
 				ps.setString(3, vendor.getName());
 				ps.setString(4, vendor.getMobile());
