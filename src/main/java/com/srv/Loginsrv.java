@@ -5,6 +5,7 @@
  */
 package com.srv;
 
+import com.beans.VendorBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.util.DBUtil;
 import java.sql.SQLException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -48,7 +50,25 @@ public class Loginsrv extends HttpServlet {
             if (rs.next()) {
 
                 
-                
+                HttpSession session = request.getSession();
+					session.setAttribute("user","user");
+					session.setAttribute("username", uname);
+					session.setAttribute("password", pword);
+					
+					
+					
+					
+					String vid = uname;
+					String pass = pword;
+					
+					String vname = rs.getString("vname");
+					String vemail= rs.getString("vemail");
+					String vaddr = rs.getString("address");
+					String cname = rs.getString("company");
+					String mob = rs.getString("vmob");
+					VendorBean vendor = new VendorBean(vid,vname,mob,vemail,vaddr,cname,pass);
+					
+					session.setAttribute("vendordata", vendor);
                 RequestDispatcher rd = request.getRequestDispatcher("header.jsp");
 
                 rd.forward(request, response);

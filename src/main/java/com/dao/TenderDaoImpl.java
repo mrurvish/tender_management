@@ -19,51 +19,49 @@ import java.util.List;
  * @author Admin
  */
 public class TenderDaoImpl implements TenderDao {
-    @Override
-	public List<TenderBean> getAllTenders() {
-		List<TenderBean> tenderList  = new ArrayList<TenderBean>();
-		
-		Connection con = DBUtil.provideConnection();
-		
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		
-		try {
-			ps = con.prepareStatement("select * from tender");
-			
-			rs=ps.executeQuery();
-			while(rs.next())
-			{
-				TenderBean tender=new TenderBean();
-				
-				tender.setId(rs.getString("tid"));
-				tender.setName(rs.getString("tname"));
-				tender.setType(rs.getString("ttype"));
-				tender.setPrice(rs.getInt("tprice"));
-				tender.setDesc(rs.getString("tdesc"));
-				java.util.Date udate = new java.util.Date(rs.getDate(6).getTime());
-				tender.setDeadline(udate);
-				tender.setLocation(rs.getString("tloc"));
-				tenderList.add(tender);
-			}
-			
-		} catch (SQLException e) {
 
-			e.printStackTrace();
-		}
-		finally{
-			
-			DBUtil.closeConnection(ps);
-			
-			DBUtil.closeConnection(rs);
-			
-			DBUtil.closeConnection(con);
-			
-		}
-		
-		
-		return tenderList;
-	}
+    @Override
+    public List<TenderBean> getAllTenders() {
+        List<TenderBean> tenderList = new ArrayList<TenderBean>();
+
+        Connection con = DBUtil.provideConnection();
+
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            ps = con.prepareStatement("select * from tender");
+
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                TenderBean tender = new TenderBean();
+
+                tender.setId(rs.getString("tid"));
+                tender.setName(rs.getString("tname"));
+                tender.setType(rs.getString("ttype"));
+                tender.setPrice(rs.getInt("tprice"));
+                tender.setDesc(rs.getString("tdesc"));
+                java.util.Date udate = new java.util.Date(rs.getDate(6).getTime());
+                tender.setDeadline(udate);
+                tender.setLocation(rs.getString("tloc"));
+                tenderList.add(tender);
+            }
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        } finally {
+
+            DBUtil.closeConnection(ps);
+
+            DBUtil.closeConnection(rs);
+
+            DBUtil.closeConnection(con);
+
+        }
+
+        return tenderList;
+    }
 
     @Override
     public List<TenderBean> getTenderDetails(String id) {
@@ -92,7 +90,38 @@ public class TenderDaoImpl implements TenderDao {
 
     @Override
     public String getTenderStatus(String tenderId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String status = "Not Assigned";
+
+        Connection con = DBUtil.provideConnection();
+
+        PreparedStatement ps = null;
+
+        ResultSet rs = null;
+
+        try {
+            ps = con.prepareStatement("select * from tenderstatus where tid=?");
+
+            ps.setString(1, tenderId);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                //Tender Has been Assigned 
+
+                status = "Assigned";
+            }
+
+        } catch (SQLException e) {
+            status = "Error: " + e.getMessage();
+            e.printStackTrace();
+        } finally {
+
+            DBUtil.closeConnection(con);
+            DBUtil.closeConnection(ps);
+            DBUtil.closeConnection(rs);
+
+        }
+        return status;
     }
 
     @Override

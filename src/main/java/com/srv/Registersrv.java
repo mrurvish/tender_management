@@ -7,6 +7,7 @@ package com.srv;
 import com.beans.VendorBean;
 import com.dao.VendorDao;
 import com.dao.VendorDaoImpl;
+import com.util.IDUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -47,7 +48,8 @@ public class Registersrv extends HttpServlet {
         String vaddr = request.getParameter("vaddr").trim();
         String cname = request.getParameter("cname").trim();
         String vpass = request.getParameter("vpass").trim();
-        VendorBean vendor = new VendorBean(vname, vmob, vemail, vaddr, cname, vpass);
+        String vid = IDUtil.generateVendorId();
+        VendorBean vendor = new VendorBean(vid,vname, vmob, vemail, vaddr, cname, vpass);
 
         VendorDao dao = new VendorDaoImpl();
 

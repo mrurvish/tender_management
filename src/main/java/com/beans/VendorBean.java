@@ -62,7 +62,7 @@ public class VendorBean implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public VendorBean(String name, String mobile, String email, String address,
+	public VendorBean(String id,String name, String mobile, String email, String address,
 			String company, String password) {
 		super();
 	

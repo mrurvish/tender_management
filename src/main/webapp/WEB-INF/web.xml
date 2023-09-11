@@ -8,6 +8,10 @@
         <servlet-name>Registersrv</servlet-name>
         <servlet-class>com.srv.Registersrv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logoutsrv</servlet-name>
+        <servlet-class>com.srv.Logoutsrv</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Loginsrv</servlet-name>
         <url-pattern>/Loginsrv</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>Registersrv</servlet-name>
         <url-pattern>/Registersrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logoutsrv</servlet-name>
+        <url-pattern>/Logoutsrv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
