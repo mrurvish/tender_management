@@ -42,7 +42,7 @@
 <%
 				BidderDao dao = new BidderDaoImpl();
                                 
-				VendorBean vendor = (VendorBean) session.getAttribute("vendordata");
+				VendorBean vendor = (VendorBean)session.getAttribute("vendordata");
 				List<BidderBean> bidderList = dao.getAllBidsOfaVendor(vendor.getId());
 
 				for (BidderBean bidder : bidderList) {

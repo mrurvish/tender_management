@@ -65,7 +65,7 @@ public class VendorBean implements Serializable{
 	public VendorBean(String id,String name, String mobile, String email, String address,
 			String company, String password) {
 		super();
-	
+                this.id = id;
 		this.name = name;
 		this.mobile = mobile;
 		this.email = email;

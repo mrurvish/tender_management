@@ -58,7 +58,7 @@ public class Loginsrv extends HttpServlet {
 					
 					
 					
-					String vid = uname;
+					String vid = rs.getString("vid");
 					String pass = pword;
 					
 					String vname = rs.getString("vname");
@@ -69,7 +69,7 @@ public class Loginsrv extends HttpServlet {
 					VendorBean vendor = new VendorBean(vid,vname,mob,vemail,vaddr,cname,pass);
 					
 					session.setAttribute("vendordata", vendor);
-                RequestDispatcher rd = request.getRequestDispatcher("header.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 
                 rd.forward(request, response);
 

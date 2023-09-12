@@ -1,7 +1,7 @@
 <%-- 
-    Document   : header
-    Created on : 19 Aug, 2023, 8:08:58 AM
-    Author     : Admin
+    Document   : header0
+    Created on : 12 Sept 2023, 18:18:38
+    Author     : urvish
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -66,34 +66,7 @@
                                             <a class="nav-link" href="about.html">About</a>
                                         </li>
 
-                                        <li class="dropdown nav-item">
-
-                                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">Vendors
-                                                <span class="caret"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="Tenderview.jsp">View all Tenders</a></li>
-                                                <li><a href="Tenderbid.jsp">Bid for a Tender</a></li>
-                                                <li><a href="Tenderbidhistory.jsp">Bidding History</a></li>
-                                                <li><a href="Tenderbidstatus.jsp">Bid Status</a></li>
-                                            </ul>
-                                        </li>
-
-
-                                        
-
-                                        <li class="dropdown">
-
-                                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">Profile
-                                                <span class="caret"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="viewProfile.jsp">View Profile</a></li>
-                                                <li><a href="updateProfile.jsp">Update Profile</a></li>
-                                                <li><a href="updatePassword.jsp">Change Password</a></li>
-                                                <li><a href="LogoutSrv">Logout</a></li>
-                                            </ul>
-                                        </li>
+                                       
 
                                     </ul>
                                 </div>
@@ -101,9 +74,9 @@
                         </div>
                         <div class="col-md-2 d_none">
                             <ul class="email text_align_right">
-                                
-                                <li><a href="Logoutsrv"><img src="images/logout.png"></a></li>
-                                
+                                <li> <a href="Login.jsp"> Login/Register </a></li>
+                               
+                               
                             </ul>
                         </div>
                     </div>
