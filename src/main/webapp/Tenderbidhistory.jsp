@@ -37,7 +37,7 @@
                                 <td>Tender Id</td>
                                 <td>Bid Amount</td>
                                 <td>Deadline</td>
-                                <td>Status</td>
+                               
                             </tr>
 <%
 				BidderDao dao = new BidderDaoImpl();
@@ -54,7 +54,7 @@
 					<td><%=bidder.getTenderId()%></td>
 					<td>&#8377; <%=bidder.getBidAmount()%></td>
 					<td><%=bidder.getBidDeadline()%></td>
-					<td style="font-weight:bold;"><%=bidder.getBidStatus()%></td>
+					
 				</tr>
 
 

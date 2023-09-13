@@ -43,8 +43,8 @@
                         TenderDao tdao = new TenderDaoImpl();
                         BidderDao bdao = new BidderDaoImpl();
                         List<TenderBean> tenderList = tdao.getAllTenders();
-                       // VendorBean vendor = (VendorBean) session.getAttribute("vendordata");
-                       // String vid = vendor.getId();
+                        VendorBean vendor = (VendorBean) session.getAttribute("vendordata");
+                        String vid = vendor.getId();
                         for (TenderBean tender : tenderList) {
                             String tid = tender.getId();
                             String tname = tender.getName();
@@ -76,7 +76,7 @@
                         <%
                             if (!isAssigned) {
                         %>
-                        <td><a href=""><button class="btn btn-success">BID
+                        <td><a href="TenderBidForm.jsp?tid=<%=tid%>&&vid=<%=vid%>"><button class="btn btn-success">BID
                                     NOW</button></a></td>
                                     <%
                                     } else {

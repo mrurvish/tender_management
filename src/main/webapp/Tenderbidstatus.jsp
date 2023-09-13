@@ -4,6 +4,11 @@
     Author     : Admin
 --%>
 
+<%@page import="com.beans.BidderBean"%>
+<%@page import="java.util.List"%>
+<%@page import="com.beans.VendorBean"%>
+<%@page import="com.dao.BidderDaoImpl"%>
+<%@page import="com.dao.BidderDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,7 +39,29 @@
                                 <td>Deadline</td>
                                 <td>Status</td>
                             </tr>
+<%
+				BidderDao dao = new BidderDaoImpl();
+                                
+				VendorBean vendor = (VendorBean)session.getAttribute("vendordata");
+				List<BidderBean> bidderList = dao.getAllBidsOfaVendor(vendor.getId());
 
+				for (BidderBean bidder : bidderList) {
+				%>
+
+
+				<tr>
+					<td><%=bidder.getBidId()%></td>
+					<td><%=bidder.getTenderId()%></td>
+					<td>&#8377; <%=bidder.getBidAmount()%></td>
+					<td><%=bidder.getBidDeadline()%></td>
+					<td style="font-weight:bold;"><%=bidder.getBidStatus()%></td>
+				</tr>
+
+
+
+				<%
+				}
+				%>
                         </table>
                     </div>
                     <div class="col-md-2">

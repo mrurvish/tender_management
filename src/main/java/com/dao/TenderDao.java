@@ -6,6 +6,7 @@
 package com.dao;
 
 import com.beans.TenderBean;
+import com.beans.TenderStatusBean;
 import java.util.List;
 
 /**
@@ -29,5 +30,5 @@ public interface TenderDao {
 	
 	public String assignTender(String tenderId,String vendorId,String bidderId);
 	
-	//public List<TenderStatusBean> getAllAssignedTenders();
+	public List<TenderStatusBean> getAllAssignedTenders();
 }

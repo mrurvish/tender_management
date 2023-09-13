@@ -13,7 +13,7 @@ import java.util.List;
  * @author Admin
  */
 public interface BidderDao {
-    public String acceptBid(String applicationId,String tenderId,String vendorId);
+   public String acceptBid(String applicationId,String tenderId,String vendorId);
 	
 	public String rejectBid(String applicationId);
 	
