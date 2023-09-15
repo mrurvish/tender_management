@@ -24,6 +24,18 @@
         <servlet-name>Changepasssrv</servlet-name>
         <servlet-class>com.srv.Changepasssrv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateTendersrv</servlet-name>
+        <servlet-class>com.srv.CreateTendersrv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Acceptbid</servlet-name>
+        <servlet-class>com.srv.Acceptbid</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Rejectbidsrv</servlet-name>
+        <servlet-class>com.srv.Rejectbidsrv</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Loginsrv</servlet-name>
         <url-pattern>/Loginsrv</url-pattern>
@@ -47,6 +59,18 @@
     <servlet-mapping>
         <servlet-name>Changepasssrv</servlet-name>
         <url-pattern>/Changepasssrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateTendersrv</servlet-name>
+        <url-pattern>/CreateTendersrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Acceptbid</servlet-name>
+        <url-pattern>/Acceptbid</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Rejectbidsrv</servlet-name>
+        <url-pattern>/Rejectbidsrv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

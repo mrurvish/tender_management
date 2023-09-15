@@ -14,40 +14,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title></title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-         <%
-	String uname = (String) session.getAttribute("username");
-	String pword = (String) session.getAttribute("password");
-String s="";
-	if ( uname.equals("") || pword.equals("")) {
-                 s ="notstarted" ;
-             }
-             else
-             {
-             s="started";
-             }
+        <jsp:include page="header.jsp"></jsp:include>
+            <div id="top_section">
+                <div class="container-fluid row">
 
-	
-	%>
-        <%
-            BidderDao dao = new BidderDaoImpl();
+                    <div class="col-md-2">
 
-            VendorBean vendor = (VendorBean) session.getAttribute("vendordata");
-            String id = null;
-            String test=null;
-            
-            if (vendor != null) {
-                id = "continue";
-                test=vendor.getMobile();
-            }
-            else
-            {
-            id="nooooo";
-            }
-        %>
-        <h1><%out.println(id+test+"    "+s);%></h1>
+                   
+                    <jsp:include page="notice.jsp"></jsp:include><br>
+
+                        <!-- Next marquee starting-->
+
+
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-striped table-hover bg-gray">
+                            
+                    </table>
+                </div>
+                <div class="col-md-2">
+                    <jsp:include page="approvedtender.jsp"></jsp:include><br>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
