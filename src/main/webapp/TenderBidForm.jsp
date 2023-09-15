@@ -57,7 +57,7 @@
                         <tr>
                         <th colspan="2">Bid For The Tender<input type="hidden" name="vid" value="<%= vendorId%>"></th>
                         </tr>
-                        <tr style="color: white; font-size: 16px; font-weight: bold; background-color:black;opacity: 0.7>
+                        <tr style="color: white; font-size: 16px; font-weight: bold; background-color:black;opacity: 0.7">
                             
                             <td style="color:red">Tender Id : </td><td><input type="hidden" name="tid" value="<%= tender.getId()%>"><%= tender.getId()%></td>
                         </tr>

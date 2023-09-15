@@ -88,10 +88,10 @@
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="viewProfile.jsp">View Profile</a></li>
-                                                <li><a href="updateProfile.jsp">Update Profile</a></li>
-                                                <li><a href="updatePassword.jsp">Change Password</a></li>
-                                                <li><a href="LogoutSrv">Logout</a></li>
+                                                <li><a href="viewprofile.jsp">View Profile</a></li>
+                                                <li><a href="updateprofile.jsp">Update Profile</a></li>
+                                                <li><a href="updatepassword.jsp">Change Password</a></li>
+                                                <li><a href="Logoutsrv">Logout</a></li>
                                             </ul>
                                         </li>
 

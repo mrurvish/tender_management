@@ -37,6 +37,15 @@ public class Loginsrv extends HttpServlet {
             throws ServletException, IOException {
         String uname = request.getParameter("username").trim();
         String pword = request.getParameter("password").trim();
+        if(uname.equals("Admin") && pword.equals("Admin")){
+				//login successful
+				HttpSession session = request.getSession();
+				session.setAttribute("user","admin");
+				session.setAttribute("username", uname);
+				session.setAttribute("password", pword);
+				RequestDispatcher rd = request.getRequestDispatcher("adminHome.jsp");
+				rd.forward(request, response);
+			}else{
         Connection conn = DBUtil.provideConnection();
         PreparedStatement ps = null;
         PreparedStatement pst = null;
@@ -93,6 +102,7 @@ public class Loginsrv extends HttpServlet {
             DBUtil.closeConnection(rs);
 
             DBUtil.closeConnection(rs1);
+        }
         }
     }
 

@@ -16,6 +16,14 @@
         <servlet-name>BidTendersrv</servlet-name>
         <servlet-class>com.srv.BidTendersrv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Updateprofilesrv</servlet-name>
+        <servlet-class>com.srv.Updateprofilesrv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Changepasssrv</servlet-name>
+        <servlet-class>com.srv.Changepasssrv</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Loginsrv</servlet-name>
         <url-pattern>/Loginsrv</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>BidTendersrv</servlet-name>
         <url-pattern>/BidTendersrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Updateprofilesrv</servlet-name>
+        <url-pattern>/Updateprofilesrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Changepasssrv</servlet-name>
+        <url-pattern>/Changepasssrv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
