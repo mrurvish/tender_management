@@ -4,6 +4,11 @@
     Author     : Admin
 --%>
 
+<%@page import="com.util.DBUtil"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,25 +19,42 @@
 <body>
 	
           <div class="marquee" style="border:2px #26b0b0 solid;background-color:white">
-          <h4 style="background-color:black; margin-top:-1.8px; padding: 5px;opacity: 0.7;color: white"><i class="glyphicon glyphicon-volume-up"></i> 
+          <h4 style="background-color:#26b0b0; margin-top:-1.8px; padding: 5px;"><i class="glyphicon glyphicon-volume-up"></i> 
           &nbsp; Latest Updates and Notice</h4>
             <div class="marquee-content" style="padding:10px;font-weight: bold;font-size: 1.1em">
             <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrollamount="5" height="380px">
             <!-- marquee height and stop start characteristics-->
                 <!-- Notice Content-->
-            
+            <% 
+                Connection con = DBUtil.provideConnection();
+                try{
+                	PreparedStatement ps = con.prepareStatement("select * from notice order by sysdate() asc");
+                	ResultSet rs = ps.executeQuery();
+                	String noticeTitle = null;
+                	String noticeInfo = null;
+                	while(rs.next()){
+                		noticeTitle = rs.getString("title");
+                		noticeInfo = rs.getString("info");
+                		//System.out.println(noticeTitle+" "+noticeInfo);
+                		%>
                 <p style="font-weight: bold;"><span class="glyphicon glyphicon-hand-right" style="color: #3743fa;"> 
-	               <strong style="color:red"></strong><br><br>
+	               <strong style="color:red"><%= noticeTitle %></strong><br><br><%= noticeInfo %>
 	               </span>
                </p>
               <hr/>		
-                		
+                		<%
+                	}
+                }
+                catch(SQLException e){
+                	e.printStackTrace();
+                }
+                %>  
              </marquee><!-- End of marquee-->
              
              <!-- End of Notice Section -->
              
             </div>  <!--End of marquee-content-->
-          </div> <!-- End of marquee class-->
+          </div> -- End of marquee class-->
 	
 </body>
 </html>

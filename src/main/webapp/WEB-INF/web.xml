@@ -36,6 +36,14 @@
         <servlet-name>Rejectbidsrv</servlet-name>
         <servlet-class>com.srv.Rejectbidsrv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Removenoticesrv</servlet-name>
+        <servlet-class>com.srv.Removenoticesrv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Updatenoticesrv</servlet-name>
+        <servlet-class>com.srv.Updatenoticesrv</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Loginsrv</servlet-name>
         <url-pattern>/Loginsrv</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>Rejectbidsrv</servlet-name>
         <url-pattern>/Rejectbidsrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Removenoticesrv</servlet-name>
+        <url-pattern>/Removenoticesrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Updatenoticesrv</servlet-name>
+        <url-pattern>/Updatenoticesrv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

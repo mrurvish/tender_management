@@ -74,7 +74,7 @@
                                                 <li><a href="createtender.jsp">Create New Tender</a></li>
                                                 <li><a href="viewtenderbids.jsp">View Tender Bids</a></li>
                                                 <li><a href="viewtenderbids.jsp">Accept a bid</a></li>
-                                                <li><a href="viewAssignedTenders.jsp">View Assigned Tenders</a></li>
+                                                <li><a href="viewassignedtenders.jsp">View Assigned Tenders</a></li>
                                             </ul>
                                         </li>
 
@@ -87,9 +87,9 @@
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="addNotice.jsp">Add Notice</a></li>
-                                                <li><a href="removeNotice.jsp">Remove Notice</a></li>
-                                                <li><a href="updateNotice.jsp">Update Notice</a></li>
+                                                <li><a href="addnotice.jsp">Add Notice</a></li>
+                                                <li><a href="removenotice.jsp">Remove Notice</a></li>
+                                                <li><a href="updatenotice.jsp">Update Notice</a></li>
                                                 <li><a href="viewNotice.jsp">View All Notice</a></li>
                                             </ul>
                                         </li>
