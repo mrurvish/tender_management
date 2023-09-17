@@ -4,6 +4,11 @@
     Author     : Admin
 --%>
 
+<%@page import="com.util.DBUtil"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,7 +28,32 @@
                 <marquee onmouseover="stop()" onmouseout="start()" direction="up"
                          scrollamount="6" height="250">
                     <!-- Approved Tenders List -->
+<%
+		Connection con = DBUtil.provideConnection();
+		%>
+				<%
+				try {
+					PreparedStatement ps = con.prepareStatement("select * from tenderstatus order by sysdate() asc limit 6");
+					ResultSet rs = ps.executeQuery();
 
+					while (rs.next()) {
+						String bid = rs.getString("bid");
+						String tid = rs.getString("tid");
+				%>
+				<hr>
+				<p style="color: red;">
+					Application
+					Id:&nbsp;
+					<%=bid%></p>
+				<p style="color: black">
+					Assigned To: &nbsp;&nbsp;<%=tid%></p>
+
+				<%
+				}
+				} catch (SQLException e) {
+				e.printStackTrace();
+				}
+				%>
 
                     <hr>
                     <p style="color: red;">

@@ -90,7 +90,7 @@
                                                 <li><a href="addnotice.jsp">Add Notice</a></li>
                                                 <li><a href="removenotice.jsp">Remove Notice</a></li>
                                                 <li><a href="updatenotice.jsp">Update Notice</a></li>
-                                                <li><a href="viewNotice.jsp">View All Notice</a></li>
+                                                <li><a href="viewnotice.jsp">View All Notice</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">

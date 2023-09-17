@@ -28,7 +28,7 @@
 	
 	%>
         <% Connection con = DBUtil.provideConnection(); %>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="adminheader.jsp"></jsp:include>
             <div id="top_section">
                 <div class="container-fluid row">
 
